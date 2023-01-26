@@ -1,4 +1,4 @@
-### alphabetSubSequence
+### alphabetSubSequence 
 ---
 Check whether the given string is a subsequence of the plaintext alphabet.
 
@@ -27,3 +27,5 @@ alphabetSubsequence(s) = true.
 **[output] boolean**
 
 true if the given string is a subsequence of the alphabet, false otherwise.
+
+==========================================================
