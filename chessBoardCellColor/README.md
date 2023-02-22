@@ -1,6 +1,6 @@
 ### chessBoardCellColor
 
-##### Algorithm Challenge Available At [CodeFights](https://codefights.com/arcade/intro/level-6/t97bpjfrMDZH8GJhi)
+##### chessBoardCellColor
 ---
 Given two cells on the standard chess board, determine whether they have the same color or not.
 
