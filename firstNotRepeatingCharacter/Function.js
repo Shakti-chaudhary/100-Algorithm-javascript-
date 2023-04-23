@@ -19,5 +19,5 @@ function firstNotRepeatingCharacter(inputStr) {
   return "_";
 }
 
-console.log(firstNotRepeatingCharacter("abacabad")); // c
-console.log(firstNotRepeatingCharacter("abacabaabacaba")); // _
+console.log(firstNotRepeatingCharacter("abacabad")); // "c"
+console.log(firstNotRepeatingCharacter("abacabaabacaba")); // "_"
