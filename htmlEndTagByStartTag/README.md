@@ -16,7 +16,6 @@ htmlEndTagByStartTag(startTag) = "</i>".
 
 **Hints**
 -   split()
--   toString()
 
 **Input/Output**
 
