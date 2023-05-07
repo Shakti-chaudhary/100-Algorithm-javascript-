@@ -1,21 +1,17 @@
 // Incremental Backups
 
 function incrementalBackups(lastBackupTime, changes) {
-  let filesToBackup = [];
-  for (let i = 0; i < changes.length; i++) {
-    if (
-      changes[i][0] > lastBackupTime &&
-      !filesToBackup.includes(changes[i][1])
-    ) {
-      filesToBackup.push(changes[i][1]);
+  const filesToBackup = new Set();
+  for (const [timestamp, fileId] of changes) {
+    if (timestamp > lastBackupTime) {
+      filesToBackup.add(fileId);
     }
   }
-  filesToBackup.sort((a, b) => a - b);
-  return filesToBackup;
+  return Array.from(filesToBackup).sort((a, b) => a - b);
 }
 
 console.log(
-  incrementalBackups([
+  incrementalBackups(461620205, [
     [461620203, 1],
     [461620204, 2],
     [461620205, 6],
