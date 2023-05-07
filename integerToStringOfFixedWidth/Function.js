@@ -14,4 +14,7 @@ function integerToStringOfFixedWidth(number, width) {
   const zerosToAdd = width - numberString.length;
   return "0".repeat(zerosToAdd) + numberString;
 }
-z;
+
+console.log(integerToStringOfFixedWidth(1234, 2));
+console.log(integerToStringOfFixedWidth(1234, 4));
+console.log(integerToStringOfFixedWidth(1234, 5));
