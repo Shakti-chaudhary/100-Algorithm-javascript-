@@ -10,3 +10,6 @@ function isLucky(n) {
   const secondHalf = digits.slice(half).reduce((a, b) => a + b);
   return firstHalf === secondHalf;
 }
+
+console.log(isLucky(1230));
+console.log(isLucky(239017));
