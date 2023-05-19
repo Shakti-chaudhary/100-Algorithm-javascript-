@@ -5,4 +5,5 @@ function largestNumber(n) {
   return parseInt(numStr);
 }
 
+console.log(largestNumber(2));
 console.log(largestNumber(3));
