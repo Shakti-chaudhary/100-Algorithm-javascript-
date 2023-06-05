@@ -19,4 +19,5 @@ function pigLatin(str) {
   return result;
 }
 
-console.log(pigLatin("glove"));
+console.log(pigLatin("glove")); // "oveglay"
+console.log(pigLatin("eight")); // "eightway"
