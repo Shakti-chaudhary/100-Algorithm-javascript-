@@ -1,26 +1,32 @@
 // stringsConstruction
 
-function stringsConstruction(target, source) {
-  const charCount = {};
-  for (let i = 0; i < source.length; i++) {
-    if (charCount[source[i]]) {
-      charCount[source[i]] += 1;
+function stringsConstruction(stringA, stringB) {
+  const countA = {};
+  const countB = {};
+
+  // Count occurrences of each letter in stringA
+  for (const char of stringA) {
+    countA[char] = (countA[char] || 0) + 1;
+  }
+
+  // Count occurrences of each letter in stringB
+  for (const char of stringB) {
+    countB[char] = (countB[char] || 0) + 1;
+  }
+
+  // Calculate the minimum count of each letter in both strings
+  let minCount = Infinity;
+  for (const char in countA) {
+    if (countB.hasOwnProperty(char)) {
+      const count = Math.floor(countB[char] / countA[char]);
+      minCount = Math.min(minCount, count);
     } else {
-      charCount[source[i]] = 1;
+      return 0;
     }
   }
 
-  const charFreq = [];
-  for (let i = 0; i < target.length; i++) {
-    charFreq.push(charCount[target[i]] || 0);
-  }
-
-  let minFreq = Infinity;
-  for (let i = 0; i < charFreq.length; i++) {
-    minFreq = Math.min(minFreq, charFreq[i]);
-  }
-
-  return Math.floor(minFreq);
+  return minCount;
 }
 
 console.log(stringsConstruction("abc", "abccba"));
+console.log(stringsConstruction("abcc", "abcccba"));
