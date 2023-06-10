@@ -8,7 +8,6 @@ function allLongestStrings(value) {
     if (itr.length == length) ans.push(itr);
   }
 
-  console.log(length);
   return ans;
 }
 
