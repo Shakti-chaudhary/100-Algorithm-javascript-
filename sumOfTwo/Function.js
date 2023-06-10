@@ -14,4 +14,4 @@ function sumOfTwo(a, b, v) {
   return false;
 }
 
-console.log(sumOfTwo([1, 2, 3], [10, 20, 30, 40], 42));
+console.log(sumOfTwo([1, 2, 3], [10, 20, 30, 40], 42)); // true
